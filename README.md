@@ -1,3 +1,21 @@
+# Ecommerce 
+
+Atividade desenvolvida para Ilegra, cujo objetivo era contruir um ecommerce com Context API.
+
+**Requisitos**:
+
+- lista de produtos
+- Carrinho
+- Total dos valores
+## Página inicial:
+
+<img src="img/index.png">
+
+## Página do carrinho de compras:
+
+<img src="img/product-car.png">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
