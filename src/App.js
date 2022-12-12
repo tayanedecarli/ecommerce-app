@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { useThemeHook } from './components/ThemeProvider'
+import { Router } from "@reach/router"
+import Navbar from './components/NavBar';
+import Home from './components/Home';
+import Cart from './components/Cart';
+
 
 function App() {
+  const[theme] = useThemeHook();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <main className={theme ? 'bg-black' : 'bg-light-2'}>
+        <Navbar />
+        <Router>
+          <Home path="/" />
+          <Cart path="/cart" />
+        </Router>
+      </main>
   );
 }
 
